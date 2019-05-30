@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -135,11 +136,51 @@
                             <outlet property="delegate" destination="Ia1-TZ-q67" id="fEt-3X-HtU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="목록" id="fdr-Ep-dRW"/>
+                    <navigationItem key="navigationItem" title="목록" id="fdr-Ep-dRW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RMb-gc-fIK">
+                            <connections>
+                                <segue destination="OJi-GU-RP1" kind="show" id="dMd-Sz-jMk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUZ-GZ-GQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1949.2753623188407" y="-433.25892857142856"/>
+        </scene>
+        <!--메모 작성-->
+        <scene sceneID="sJX-gj-5Sz">
+            <objects>
+                <viewController id="OJi-GU-RP1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eVh-UW-tbI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pR8-nu-nRT">
+                                <rect key="frame" x="20" y="451" width="324" height="309"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W18-LG-GMR">
+                                <rect key="frame" x="20" y="132" width="374" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78294636486810809" green="1" blue="0.86472849410034025" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fSZ-Gv-NAa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="메모 작성" id="RC4-tY-Tms">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="Jk3-sg-xZC"/>
+                            <barButtonItem title="저장" id="vNs-LX-PGQ"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVn-1P-QaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2711.594202898551" y="-431.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yu6-Zg-27j">
