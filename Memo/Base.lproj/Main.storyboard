@@ -241,7 +241,7 @@
         <!--상세화면-->
         <scene sceneID="unN-Da-dEw">
             <objects>
-                <viewController id="wVy-vn-hbv" customClass="MemoReadVC" customModule="Memo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoRead" id="wVy-vn-hbv" customClass="MemoReadVC" customModule="Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KB0-ep-nv0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,6 +283,11 @@
                         <viewLayoutGuide key="safeArea" id="0rx-fH-fjN"/>
                     </view>
                     <navigationItem key="navigationItem" title="상세화면" id="uF8-K3-0fs"/>
+                    <connections>
+                        <outlet property="contents" destination="2YZ-7L-iBO" id="GA4-ON-23e"/>
+                        <outlet property="img" destination="MFL-G8-xqC" id="26B-id-Bwr"/>
+                        <outlet property="subject" destination="7r7-j9-e11" id="Jk0-v6-zZF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKo-MW-Pbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

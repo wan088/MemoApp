@@ -10,21 +10,26 @@ import UIKit
 
 class MemoReadVC: UIViewController {
 
+    @IBOutlet var subject: UILabel!
+    @IBOutlet var contents: UILabel!
+    @IBOutlet var img: UIImageView!
+    
+    var row :Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        var md = (UIApplication.shared.delegate as! AppDelegate).memoList[row]
+        self.subject.text = md.title
+        self.contents.text = md.contents
+        if let im = md.image {
+            self.img.image = im
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd일 HH:mm에 작성됨"
+        self.navigationItem.title = formatter.string(from: md.regdate!)
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -27,14 +27,11 @@ class MemoListVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = dele.memoList.count
-        print(count)
         return count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
         
         let md = dele.memoList[indexPath.row]
         let id = md.image == nil ? "memoCell" : "memoCellWithImage"
@@ -52,6 +49,13 @@ class MemoListVC: UITableViewController {
         cell.title.text = md.title
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //read_sg
+        var vc = self.storyboard?.instantiateViewController(withIdentifier: "MemoRead") as! MemoReadVC
+        vc.row = indexPath.row
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 

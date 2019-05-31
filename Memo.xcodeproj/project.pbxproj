@@ -17,6 +17,7 @@
 		CC7DD63522A0C94500F1BE66 /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD63422A0C94500F1BE66 /* MemoReadVC.swift */; };
 		CC7DD63722A0EF4A00F1BE66 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD63622A0EF4A00F1BE66 /* MemoData.swift */; };
 		CC7DD63922A1252100F1BE66 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD63822A1252100F1BE66 /* MemoCell.swift */; };
+		CC7DD63C22A14E4700F1BE66 /* fountainpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC7DD63B22A14E4700F1BE66 /* fountainpen@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CC7DD63422A0C94500F1BE66 /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
 		CC7DD63622A0EF4A00F1BE66 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 		CC7DD63822A1252100F1BE66 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		CC7DD63B22A14E4700F1BE66 /* fountainpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fountainpen@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		CC60A9FE229FE96B007AD325 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				CC7DD63A22A14E1E00F1BE66 /* Resources */,
 				CC60A9FF229FE96B007AD325 /* AppDelegate.swift */,
 				CC7DD63822A1252100F1BE66 /* MemoCell.swift */,
 				CC60AA03229FE96B007AD325 /* Main.storyboard */,
@@ -77,6 +80,14 @@
 				CC7DD63422A0C94500F1BE66 /* MemoReadVC.swift */,
 			);
 			path = Memo;
+			sourceTree = "<group>";
+		};
+		CC7DD63A22A14E1E00F1BE66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC7DD63B22A14E4700F1BE66 /* fountainpen@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				CC60AA0D229FE96C007AD325 /* LaunchScreen.storyboard in Resources */,
 				CC60AA0A229FE96C007AD325 /* Assets.xcassets in Resources */,
+				CC7DD63C22A14E4700F1BE66 /* fountainpen@2x.png in Resources */,
 				CC60AA05229FE96B007AD325 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
