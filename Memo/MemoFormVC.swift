@@ -36,15 +36,34 @@ class MemoFormVC: UIViewController, UINavigationControllerDelegate{
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func pick(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        
-        self.present(picker, animated: true)
+        let alert = UIAlertController(title: "사진모드", message: "촬영 or 앨범 \n 선택하세요", preferredStyle: .actionSheet)
+        let cam = UIAlertAction(title: "카메라", style: .default){(action) in
+            self.useCamera()
+        }
+        let pho = UIAlertAction(title: "앨범", style: .default){(action) in
+            self.useLibrary()
+        }
+        let cancel = UIAlertAction(title: "취소", style: .default)
+        alert.addAction(cam)
+        alert.addAction(pho)
+        alert.addAction(cancel)
+        self.present(alert, animated: true)
     }
     
-    
-    
+    func useCamera(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        self.present(picker, animated: true)
+    }
+    func useLibrary(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        self.present(picker, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         contents.autocapitalizationType = UITextAutocapitalizationType.none
@@ -80,6 +99,6 @@ extension MemoFormVC: UIImagePickerControllerDelegate{
         
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
+        picker.dismiss(animated: true)
     }
 }
