@@ -12,25 +12,25 @@ class MemoListVC: UITableViewController {
     var dele = UIApplication.shared.delegate as! AppDelegate
     
     override func viewWillAppear(_ animated: Bool) {
+        print("willappear")
         self.tableView.reloadData()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        print("viewdidload")
+        //sidebar button
+        var rvc = self.revealViewController()
+        var side = UIBarButtonItem(image: UIImage(named: "sidemenu.png"), style: .done, target: rvc, action: #selector(rvc?.revealToggle(_:)))
+        self.navigationItem.leftBarButtonItem = side
     }
-
-    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = dele.memoList.count
+        print("tableviw 개수카운트")
         return count
     }
 
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let md = dele.memoList[indexPath.row]
@@ -47,6 +47,7 @@ class MemoListVC: UITableViewController {
             cell.img.image = md.image
         }
         cell.title.text = md.title
+        print("cell 반환")
 
         return cell
     }
@@ -56,6 +57,7 @@ class MemoListVC: UITableViewController {
         var vc = self.storyboard?.instantiateViewController(withIdentifier: "MemoRead") as! MemoReadVC
         vc.row = indexPath.row
         self.navigationController?.pushViewController(vc, animated: true)
+        print("셀렉됐을때 설정")
     }
     
 
