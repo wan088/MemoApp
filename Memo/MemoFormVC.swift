@@ -97,6 +97,7 @@ extension MemoFormVC: UIImagePickerControllerDelegate{
         self.preview.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         picker.dismiss(animated: false)
         
+        
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
