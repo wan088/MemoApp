@@ -17,6 +17,8 @@
 		CC5FA02022B37B3D00B52177 /* icon03.png in Resources */ = {isa = PBXBuildFile; fileRef = CC5FA01A22B37B3D00B52177 /* icon03.png */; };
 		CC5FA02222B37B4500B52177 /* sidemenu.png in Resources */ = {isa = PBXBuildFile; fileRef = CC5FA02122B37B4500B52177 /* sidemenu.png */; };
 		CC5FA02422B3A4CA00B52177 /* account@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC5FA02322B3A4CA00B52177 /* account@2x.jpg */; };
+		CC5FA02622B3B79800B52177 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FA02522B3B79800B52177 /* ProfileVC.swift */; };
+		CC5FA02822B3C6C800B52177 /* profile-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CC5FA02722B3C6C800B52177 /* profile-bg.png */; };
 		CC60AA00229FE96B007AD325 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60A9FF229FE96B007AD325 /* AppDelegate.swift */; };
 		CC60AA05229FE96B007AD325 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC60AA03229FE96B007AD325 /* Main.storyboard */; };
 		CC60AA08229FE96B007AD325 /* Memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC60AA06229FE96B007AD325 /* Memo.xcdatamodeld */; };
@@ -43,6 +45,8 @@
 		CC5FA01A22B37B3D00B52177 /* icon03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon03.png; sourceTree = "<group>"; };
 		CC5FA02122B37B4500B52177 /* sidemenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenu.png; sourceTree = "<group>"; };
 		CC5FA02322B3A4CA00B52177 /* account@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "account@2x.jpg"; sourceTree = "<group>"; };
+		CC5FA02522B3B79800B52177 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		CC5FA02722B3C6C800B52177 /* profile-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-bg.png"; sourceTree = "<group>"; };
 		CC60A9FC229FE96B007AD325 /* Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC60A9FF229FE96B007AD325 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC60AA04229FE96B007AD325 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				CC60A9FF229FE96B007AD325 /* AppDelegate.swift */,
 				CC7DD63822A1252100F1BE66 /* MemoCell.swift */,
 				CC60AA03229FE96B007AD325 /* Main.storyboard */,
+				CC5FA02522B3B79800B52177 /* ProfileVC.swift */,
 				CC5FA01322B37ACA00B52177 /* SideBarVC.swift */,
 				CC7DD63622A0EF4A00F1BE66 /* MemoData.swift */,
 				CC60AA09229FE96C007AD325 /* Assets.xcassets */,
@@ -111,6 +116,7 @@
 		CC7DD63A22A14E1E00F1BE66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CC5FA02722B3C6C800B52177 /* profile-bg.png */,
 				CC5FA01622B37B3D00B52177 /* icon01.png */,
 				CC5FA01522B37B3D00B52177 /* icon02.png */,
 				CC5FA02122B37B4500B52177 /* sidemenu.png */,
@@ -184,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5FA02422B3A4CA00B52177 /* account@2x.jpg in Resources */,
+				CC5FA02822B3C6C800B52177 /* profile-bg.png in Resources */,
 				CC5FA02222B37B4500B52177 /* sidemenu.png in Resources */,
 				CC60AA0D229FE96C007AD325 /* LaunchScreen.storyboard in Resources */,
 				CC5FA01F22B37B3D00B52177 /* icon05.png in Resources */,
@@ -205,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5FA02622B3B79800B52177 /* ProfileVC.swift in Sources */,
 				CC7DD63922A1252100F1BE66 /* MemoCell.swift in Sources */,
 				CC7DD63122A0C8C700F1BE66 /* MemoListVC.swift in Sources */,
 				CC7DD63522A0C94500F1BE66 /* MemoReadVC.swift in Sources */,

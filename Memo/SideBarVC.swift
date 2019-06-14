@@ -60,6 +60,11 @@ class SideBarVC: UITableViewController {
             var uv = self.storyboard?.instantiateViewController(withIdentifier: "memoForm")
             navi.pushViewController(uv!, animated: true)
             self.revealViewController()?.revealToggle(animated: true)
+        case 5:
+            var pvc = self.storyboard?.instantiateViewController(withIdentifier: "profile")
+            self.revealViewController()?.frontViewController.present(pvc!, animated: true){
+                self.revealViewController()?.revealToggle(self)
+            }
         default:
             print("?")
         }
