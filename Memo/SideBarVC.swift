@@ -18,6 +18,7 @@ class SideBarVC: UITableViewController {
     let tit = ["새 글 작성하기", "친구 새 글", "달력으로 보기", "공지사항", "통계", "계정관리"]
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tit.count
+        print("??")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
