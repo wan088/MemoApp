@@ -27,12 +27,22 @@ class UserInfoManager{
             UserDefaults.standard.synchronize()
         }
     }
+    var name: String?{
+        get{
+            return UserDefaults.standard.string(forKey: UserInfoKey.name)
+        }
+        set(v){
+            UserDefaults.standard.set(v, forKey: UserInfoKey.name)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
     var profile: UIImage?{
         get{
             if let _profile = UserDefaults.standard.data(forKey: UserInfoKey.profile){
                 return UIImage(data: _profile)
             }else{
-                return UIImage(named: "account")
+                return UIImage(named: "account.jpg")
             }
         }
         set(v){
