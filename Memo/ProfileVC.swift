@@ -217,6 +217,7 @@ extension ProfileVC: UIImagePickerControllerDelegate, UINavigationControllerDele
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true){
             var photo = info[.editedImage] as! UIImage
+            self.uManager.profile = photo
             self.profileImage.image = photo
         }
     }

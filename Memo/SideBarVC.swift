@@ -9,7 +9,7 @@
 import UIKit
 
 class SideBarVC: UITableViewController {
-    
+    let uManager = UserInfoManager()
     
     var nameLabel = UILabel()
     var emailLabel = UILabel()
@@ -30,20 +30,20 @@ class SideBarVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.revealViewController()?.frontViewController.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(close(_:))))
+        
         var headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 70))
         headerView.backgroundColor = .brown
         
         nameLabel = UILabel(frame: CGRect(x: 70, y: 15, width: self.view.frame.width, height: 30))
-        self.nameLabel.text = "김용완"
         self.nameLabel.textColor = .white
         headerView.addSubview(nameLabel)
 
         emailLabel = UILabel(frame: CGRect(x: 70, y: 30, width: self.view.frame.width, height: 30))
-        self.emailLabel.text = "wanrage@naver.com"
         self.emailLabel.textColor = .white
         headerView.addSubview(emailLabel)
         
-        userImage.image = UIImage(named: "account.jpg")
         self.userImage.frame = CGRect(x: 10, y: 15, width: 50, height: 50)
         self.userImage.layer.cornerRadius = self.userImage.frame.width/2
         self.userImage.layer.masksToBounds = true
@@ -54,6 +54,17 @@ class SideBarVC: UITableViewController {
         
         
     }
+    @objc func close(_ sender: Any){
+    
+        self.revealViewController()?.revealToggle(animated: true)
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.nameLabel.text = uManager.name ?? "Guest"
+        self.emailLabel.text = uManager.account ?? ""
+        self.userImage.image = uManager.profile ?? UIImage(named: "account.jpg")
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
