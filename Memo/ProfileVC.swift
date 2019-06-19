@@ -12,6 +12,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var profileImage = UIImageView()
     var tv = UITableView()
+    var uManager = UserInfoManager()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
@@ -84,6 +85,46 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         
     }
+    //Login
+    @objc func doLogin(_ sender: Any){
+        var loginAlert = UIAlertController(title: "LOGIN", message: nil, preferredStyle: .alert)
+        loginAlert.addTextField(){ tf in
+            tf.placeholder = "Your Account"
+        }
+        loginAlert.addTextField(){tf in
+            tf.placeholder = "Password"
+            tf.isSecureTextEntry = true
+        }
+        loginAlert.addAction(UIAlertAction(title: "Login", style: .default){(_) in
+            var account = loginAlert.textFields?[0].text ?? ""
+            var password = loginAlert.textFields?[1].text ?? ""
+            if self.uManager.login(account: account, password: password){
+                //로그인 시 처리
+                
+            }else{
+                let msg = "로그인에 실패하였습니다"
+                let failAlert = UIAlertController(title: "로그인 실패", message: msg, preferredStyle: .alert)
+                failAlert.addAction(UIAlertAction(title: "확인", style: .cancel, handler: nil))
+                self.present(failAlert, animated: true)
+            }
+        })
+        loginAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(loginAlert, animated: true)
+        
+    }
+    //Logout
+    @objc func doLogout(_ sender: Any){
+        let alert = UIAlertController(title: "로그아웃", message: "로그아웃 하시겠습니까?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "취소", style: .cancel))
+        alert.addAction(UIAlertAction(title: "로그아웃", style: .default){action in
+            if self.uManager.logout(){
+                    //로그아웃 시 처리
+            }
+        })
+        
+    }
+    
     
     @objc func close(_ sender: Any){
         self.dismiss(animated: true)

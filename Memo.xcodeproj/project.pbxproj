@@ -30,6 +30,7 @@
 		CC7DD63722A0EF4A00F1BE66 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD63622A0EF4A00F1BE66 /* MemoData.swift */; };
 		CC7DD63922A1252100F1BE66 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DD63822A1252100F1BE66 /* MemoCell.swift */; };
 		CC7DD63C22A14E4700F1BE66 /* fountainpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC7DD63B22A14E4700F1BE66 /* fountainpen@2x.png */; };
+		CC8A435D22B8D73D009DC059 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8A435C22B8D73D009DC059 /* UserInfoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		CC7DD63622A0EF4A00F1BE66 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 		CC7DD63822A1252100F1BE66 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		CC7DD63B22A14E4700F1BE66 /* fountainpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fountainpen@2x.png"; sourceTree = "<group>"; };
+		CC8A435C22B8D73D009DC059 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				CC60A9FF229FE96B007AD325 /* AppDelegate.swift */,
 				CC7DD63822A1252100F1BE66 /* MemoCell.swift */,
 				CC60AA03229FE96B007AD325 /* Main.storyboard */,
+				CC8A435C22B8D73D009DC059 /* UserInfoManager.swift */,
 				CC5FA02522B3B79800B52177 /* ProfileVC.swift */,
 				CC5FA01322B37ACA00B52177 /* SideBarVC.swift */,
 				CC7DD63622A0EF4A00F1BE66 /* MemoData.swift */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC8A435D22B8D73D009DC059 /* UserInfoManager.swift in Sources */,
 				CC5FA02622B3B79800B52177 /* ProfileVC.swift in Sources */,
 				CC7DD63922A1252100F1BE66 /* MemoCell.swift in Sources */,
 				CC7DD63122A0C8C700F1BE66 /* MemoListVC.swift in Sources */,
