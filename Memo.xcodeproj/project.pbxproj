@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC2E87F122BB7F4A00B2131B /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2E87F022BB7F4A00B2131B /* Tutorial.storyboard */; };
+		CC2E87F322BB814700B2131B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E87F222BB814700B2131B /* Utils.swift */; };
+		CC2E87F622BB94B500B2131B /* TutorialMasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E87F522BB94B500B2131B /* TutorialMasterVC.swift */; };
 		CC5FA01022B2667500B52177 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5FA00E22B2667500B52177 /* SWRevealViewController.m */; };
 		CC5FA01422B37ACA00B52177 /* SideBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FA01322B37ACA00B52177 /* SideBarVC.swift */; };
 		CC5FA01B22B37B3D00B52177 /* icon02.png in Resources */ = {isa = PBXBuildFile; fileRef = CC5FA01522B37B3D00B52177 /* icon02.png */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC2E87F022BB7F4A00B2131B /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		CC2E87F222BB814700B2131B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CC2E87F522BB94B500B2131B /* TutorialMasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMasterVC.swift; sourceTree = "<group>"; };
 		CC5FA00D22B2667500B52177 /* Memo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC5FA00E22B2667500B52177 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		CC5FA00F22B2667500B52177 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -75,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC2E87F422BB946E00B2131B /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				CC2E87F022BB7F4A00B2131B /* Tutorial.storyboard */,
+				CC2E87F522BB94B500B2131B /* TutorialMasterVC.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		CC60A9F3229FE96B007AD325 = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +109,12 @@
 		CC60A9FE229FE96B007AD325 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				CC2E87F422BB946E00B2131B /* Tutorial */,
 				CC7DD63A22A14E1E00F1BE66 /* Resources */,
-				CC60A9FF229FE96B007AD325 /* AppDelegate.swift */,
-				CC7DD63822A1252100F1BE66 /* MemoCell.swift */,
 				CC60AA03229FE96B007AD325 /* Main.storyboard */,
+				CC60A9FF229FE96B007AD325 /* AppDelegate.swift */,
+				CC2E87F222BB814700B2131B /* Utils.swift */,
+				CC7DD63822A1252100F1BE66 /* MemoCell.swift */,
 				CC8A435C22B8D73D009DC059 /* UserInfoManager.swift */,
 				CC5FA02522B3B79800B52177 /* ProfileVC.swift */,
 				CC5FA01322B37ACA00B52177 /* SideBarVC.swift */,
@@ -200,6 +217,7 @@
 				CC5FA01D22B37B3D00B52177 /* icon04.png in Resources */,
 				CC60AA0A229FE96C007AD325 /* Assets.xcassets in Resources */,
 				CC7DD63C22A14E4700F1BE66 /* fountainpen@2x.png in Resources */,
+				CC2E87F122BB7F4A00B2131B /* Tutorial.storyboard in Resources */,
 				CC5FA01E22B37B3D00B52177 /* icon06.png in Resources */,
 				CC60AA05229FE96B007AD325 /* Main.storyboard in Resources */,
 				CC5FA01B22B37B3D00B52177 /* icon02.png in Resources */,
@@ -215,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2E87F622BB94B500B2131B /* TutorialMasterVC.swift in Sources */,
 				CC8A435D22B8D73D009DC059 /* UserInfoManager.swift in Sources */,
 				CC5FA02622B3B79800B52177 /* ProfileVC.swift in Sources */,
 				CC7DD63922A1252100F1BE66 /* MemoCell.swift in Sources */,
@@ -226,6 +245,7 @@
 				CC7DD63322A0C92A00F1BE66 /* MemoFormVC.swift in Sources */,
 				CC60AA00229FE96B007AD325 /* AppDelegate.swift in Sources */,
 				CC5FA01422B37ACA00B52177 /* SideBarVC.swift in Sources */,
+				CC2E87F322BB814700B2131B /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
