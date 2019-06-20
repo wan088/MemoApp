@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li1-KN-ziS">
-                                <rect key="frame" x="144" y="617" width="87" height="30"/>
+                                <rect key="frame" x="144" y="627" width="87" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HVl-8d-6RX"/>
                                 </constraints>
@@ -27,12 +27,15 @@
                                 <state key="normal" title="시작하기">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startBtn:" destination="vkJ-4e-k3n" eventType="touchUpInside" id="3ap-zi-Z97"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Li1-KN-ziS" firstAttribute="centerX" secondItem="h5X-wh-RiP" secondAttribute="centerX" id="SPA-A6-5Kq"/>
-                            <constraint firstItem="Jmh-Z1-VlI" firstAttribute="bottom" secondItem="Li1-KN-ziS" secondAttribute="bottom" constant="20" id="sdZ-j2-w7F"/>
+                            <constraint firstItem="Jmh-Z1-VlI" firstAttribute="bottom" secondItem="Li1-KN-ziS" secondAttribute="bottom" constant="10" id="d57-0e-X6j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jmh-Z1-VlI"/>
                     </view>
@@ -44,21 +47,24 @@
         <!--Page View Controller-->
         <scene sceneID="Q2Z-mT-VBy">
             <objects>
-                <pageViewController storyboardIdentifier="PageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="HGx-ku-IIA" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="HGx-ku-IIA" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XP2-Af-mjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="-61"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial ContentsVC-->
         <scene sceneID="gbm-t7-esH">
             <objects>
-                <viewController storyboardIdentifier="ContentsVC" id="V9D-ib-cln" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContentsVC" id="V9D-ib-cln" customClass="TutorialContentsVC" customModule="Memo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="njH-0H-zlp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGX-Lt-E7F" userLabel="배경 이미지">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLQ-8R-LDD" userLabel="제목 레이블">
-                                <rect key="frame" x="160" y="85" width="55.5" height="36"/>
+                                <rect key="frame" x="160" y="36" width="55.5" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="fHN-gh-N97"/>
                                 </constraints>
@@ -66,14 +72,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NGX-Lt-E7F" userLabel="배경 이미지">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NGX-Lt-E7F" firstAttribute="top" secondItem="R2O-Ac-hNt" secondAttribute="top" id="7Iz-2E-D5e"/>
-                            <constraint firstItem="sLQ-8R-LDD" firstAttribute="top" secondItem="R2O-Ac-hNt" secondAttribute="top" constant="65" id="F9o-jo-s6l"/>
+                            <constraint firstItem="sLQ-8R-LDD" firstAttribute="top" secondItem="R2O-Ac-hNt" secondAttribute="top" constant="16" id="FYC-sZ-7Hx"/>
                             <constraint firstItem="NGX-Lt-E7F" firstAttribute="leading" secondItem="R2O-Ac-hNt" secondAttribute="leading" id="jB2-ej-T9s"/>
                             <constraint firstItem="NGX-Lt-E7F" firstAttribute="trailing" secondItem="R2O-Ac-hNt" secondAttribute="trailing" id="qhz-Vi-zS1"/>
                             <constraint firstItem="sLQ-8R-LDD" firstAttribute="centerX" secondItem="njH-0H-zlp" secondAttribute="centerX" id="tCh-k2-HkM"/>
@@ -81,6 +84,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R2O-Ac-hNt"/>
                     </view>
+                    <connections>
+                        <outlet property="bgImg" destination="NGX-Lt-E7F" id="nHX-GS-o9e"/>
+                        <outlet property="subject" destination="sLQ-8R-LDD" id="JqF-bR-443"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQu-t7-Rux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

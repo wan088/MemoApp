@@ -10,9 +10,13 @@ import UIKit
 
 class MemoListVC: UITableViewController {
     var dele = UIApplication.shared.delegate as! AppDelegate
-    
+    var uManager = UserInfoManager()
     override func viewWillAppear(_ animated: Bool) {
-        print("willappear")
+        if !UserDefaults.standard.bool(forKey: UserInfoManager.UserInfoKey.tutorial) {
+            var tutoStory = UIStoryboard(name: "Tutorial", bundle: .main)
+            var tmVC = tutoStory.instantiateViewController(withIdentifier: "MasterVC")
+            self.present(tmVC, animated: false)
+        }
         self.tableView.reloadData()
     }
     override func viewDidLoad() {

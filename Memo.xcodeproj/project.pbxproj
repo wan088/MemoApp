@@ -10,6 +10,7 @@
 		CC2E87F122BB7F4A00B2131B /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2E87F022BB7F4A00B2131B /* Tutorial.storyboard */; };
 		CC2E87F322BB814700B2131B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E87F222BB814700B2131B /* Utils.swift */; };
 		CC2E87F622BB94B500B2131B /* TutorialMasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E87F522BB94B500B2131B /* TutorialMasterVC.swift */; };
+		CC2E87F822BB984600B2131B /* TutorialContentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2E87F722BB984600B2131B /* TutorialContentsVC.swift */; };
 		CC5FA01022B2667500B52177 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5FA00E22B2667500B52177 /* SWRevealViewController.m */; };
 		CC5FA01422B37ACA00B52177 /* SideBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FA01322B37ACA00B52177 /* SideBarVC.swift */; };
 		CC5FA01B22B37B3D00B52177 /* icon02.png in Resources */ = {isa = PBXBuildFile; fileRef = CC5FA01522B37B3D00B52177 /* icon02.png */; };
@@ -40,6 +41,7 @@
 		CC2E87F022BB7F4A00B2131B /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		CC2E87F222BB814700B2131B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CC2E87F522BB94B500B2131B /* TutorialMasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMasterVC.swift; sourceTree = "<group>"; };
+		CC2E87F722BB984600B2131B /* TutorialContentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentsVC.swift; sourceTree = "<group>"; };
 		CC5FA00D22B2667500B52177 /* Memo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC5FA00E22B2667500B52177 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		CC5FA00F22B2667500B52177 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				CC2E87F022BB7F4A00B2131B /* Tutorial.storyboard */,
 				CC2E87F522BB94B500B2131B /* TutorialMasterVC.swift */,
+				CC2E87F722BB984600B2131B /* TutorialContentsVC.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				CC7DD63522A0C94500F1BE66 /* MemoReadVC.swift in Sources */,
 				CC5FA01022B2667500B52177 /* SWRevealViewController.m in Sources */,
 				CC60AA08229FE96B007AD325 /* Memo.xcdatamodeld in Sources */,
+				CC2E87F822BB984600B2131B /* TutorialContentsVC.swift in Sources */,
 				CC7DD63722A0EF4A00F1BE66 /* MemoData.swift in Sources */,
 				CC7DD63322A0C92A00F1BE66 /* MemoFormVC.swift in Sources */,
 				CC60AA00229FE96B007AD325 /* AppDelegate.swift in Sources */,

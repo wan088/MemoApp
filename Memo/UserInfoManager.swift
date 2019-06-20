@@ -7,6 +7,7 @@ class UserInfoManager{
         static var account = "ACCOUNT"
         static var name = "NAME"
         static var profile = "PROFILE"
+        static var tutorial = "TUTORIAL"
     }
     
     var loginid: Int{
@@ -53,6 +54,8 @@ class UserInfoManager{
             }
         }
     }
+
+    
     //Login 했는지 판별하는 연산 프로퍼티
     var isLogin: Bool{
         get{
