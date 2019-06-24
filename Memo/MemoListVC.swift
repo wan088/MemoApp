@@ -12,17 +12,24 @@ class MemoListVC: UITableViewController {
     var dele = UIApplication.shared.delegate as! AppDelegate
     var uManager = UserInfoManager()
     override func viewWillAppear(_ animated: Bool) {
+        runTutorial()
+        self.tableView.reloadData()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.addSideBtn()
+        //sidebar button
+    }
+    
+    
+    func runTuttorial(){
         if !UserDefaults.standard.bool(forKey: UserInfoManager.UserInfoKey.tutorial) {
             var tutoStory = UIStoryboard(name: "Tutorial", bundle: .main)
             var tmVC = tutoStory.instantiateViewController(withIdentifier: "MasterVC")
             self.present(tmVC, animated: false)
         }
-        self.tableView.reloadData()
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("viewdidload")
-        //sidebar button
+    func addSideBtn(){
         var rvc = self.revealViewController()
         var side = UIBarButtonItem(image: UIImage(named: "sidemenu.png"), style: .done, target: rvc, action: #selector(rvc?.revealToggle(_:)))
         self.navigationItem.leftBarButtonItem = side
