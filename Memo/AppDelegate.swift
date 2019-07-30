@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pc.pageIndicatorTintColor = .darkGray
         pc.currentPageIndicatorTintColor = .red
         pc.backgroundColor = .white
+        
+        
     
         return true
     }

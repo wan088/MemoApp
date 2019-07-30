@@ -12,7 +12,7 @@ class MemoListVC: UITableViewController {
     var dele = UIApplication.shared.delegate as! AppDelegate
     var uManager = UserInfoManager()
     override func viewWillAppear(_ animated: Bool) {
-        runTutorial()
+        runTuttorial()
         self.tableView.reloadData()
     }
     override func viewDidLoad() {

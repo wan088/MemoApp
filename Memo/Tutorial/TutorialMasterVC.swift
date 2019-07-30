@@ -13,7 +13,7 @@ class TutorialMasterVC: UIViewController {
     var pageVC: UIPageViewController!
     func instanceCVC(idx: Int) -> TutorialContentsVC{
         var cvc = instanceTutorialVC(name: "ContentsVC") as! TutorialContentsVC
-        cvc.subject_text = "\(idx)번째 튜토리얼 화면"
+        cvc.subject_text = "\(idx+1)번째 튜토리얼 화면"
         cvc.bgImg_imageName = "page\(idx)"
         cvc.pageIdx = idx
         return cvc
